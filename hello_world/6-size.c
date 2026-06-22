@@ -8,6 +8,6 @@
 
 int main(void)
 {
-printf("Size of a char: %d byte(s)\n", sizeof(int));
+printf("Size of a char: %d byte(s)\n", sizeof(32));
 return (0);
 }
