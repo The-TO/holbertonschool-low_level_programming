@@ -4,7 +4,7 @@
 
 /**
  * main - code for generate number negative  null or positive
- * 
+ *
  * Return: 0 (Succes)
  */
 
