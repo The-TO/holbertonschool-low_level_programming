@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * betty style doc for function main goes there
  * main - code for generate number negative  null or positive
- * Return 0
+ * Return 0 (Succes)
  */
+
 int main(void)
 {
 	int n;
