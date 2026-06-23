@@ -12,19 +12,19 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%d est positif\n ", n);
+		printf("%d is positive\n ", n);
 
 	}
 	else if (n == 0)
 
 	{
-		printf("%d is 0\n");
+		printf("%d is zero\n", n);
 
 	}
 	else
 	{
 
-		printf("%d est negatif\n" , n);
+		printf("%d is negative\n" , n);
 
 	}
 
