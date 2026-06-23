@@ -1,5 +1,9 @@
 #include<stdio.h>
-
+/**
+ * main - code for print alphabet character with putchar
+ * 
+ * Return: 0 (Succes)
+ */
 int main(void)
 {
 	char letter = 'a';
