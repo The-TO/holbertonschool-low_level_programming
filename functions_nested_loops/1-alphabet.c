@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  main - code for print alphabet with my proper putchar
+ *  printalphabet - code for print alphabet with my proper putchar
  *
  * Return: 0 (Succes)
  */
@@ -11,7 +11,7 @@ void print_alphabet(void)
 
 	while (letter <= 'z')
 	{
-		_putchar (letter);
+		_putchar(letter);
 		letter++;
 
 	}
