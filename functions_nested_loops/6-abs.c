@@ -2,6 +2,8 @@
 /**
  * _abs - work for create abs command
  *
+ * n - is the variable that will help to put any character
+ *
  * Return: 0 (Succes)
  */
 int _abs(int n)
