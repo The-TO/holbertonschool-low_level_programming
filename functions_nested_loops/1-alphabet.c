@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  printalphabet - code for print alphabet with my proper putchar
+ *  print_alphabet - code for print alphabet with my proper putchar
  *
  * Return: 0 (Succes)
  */
