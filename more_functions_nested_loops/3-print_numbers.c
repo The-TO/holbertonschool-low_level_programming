@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - is a fonction make to multiple two int
+ * print_numbers - is a fonction to print number from 0 to 9
  *
  * Return: 0 (Succes)
  */
