@@ -20,7 +20,7 @@ int total_sum(int rows, int cols)
     for (r = 1; r <= rows; r++)
     {
         current += row_sum(r, cols);
-        total += current;
+        total = current;
     }
 
     return total;
