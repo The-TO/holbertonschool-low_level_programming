@@ -13,8 +13,8 @@ void print_most_numbers(void)
 		if (number != 2 && number != 4)
 		{
 			_putchar (number + '0');
-			_putchar ('\n');
 		}
 		number++;
 	}
+_putchar ('\n');
 }
