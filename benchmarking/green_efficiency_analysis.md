@@ -19,10 +19,10 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-long-long
 
 We observed that each phase executes in a different amount of time:
 
-TOTAL seconds: 0.000953
-BUILD_DATA seconds: 0.000271
-PROCESS seconds: 0.000448
-REDUCE seconds: 0.000231
+-TOTAL seconds: 0.000953
+-BUILD_DATA seconds: 0.000271
+-PROCESS seconds: 0.000448
+-REDUCE seconds: 0.000231
 
 This can be explained by the fact that each phase does not perform the same
 operations. The PROCESS phase is the slowest because, in addition to the base
