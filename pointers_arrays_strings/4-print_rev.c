@@ -2,8 +2,8 @@
 
 /**
  * print_rev - print the var reversed
- * 
- * @s: is the 
+ *
+ * @s: is the
  *
  * Return: Always 0.
  */
