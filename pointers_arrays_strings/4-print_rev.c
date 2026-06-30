@@ -1,15 +1,20 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_rev - print the var reversed
+ * 
+ * @s: is the 
  *
  * Return: Always 0.
  */
 void print_rev(char *s)
 {
-    int i;
+int i;
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{}
-	return (number);
+	for (i = i - 1 ; i > 0; i--)
+	{
+		_putchar (s[i]);
+	}
 }
