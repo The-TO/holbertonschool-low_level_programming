@@ -19,6 +19,13 @@
 		{
 			printf("bye!");
 		}
+		while (choice > 4)
+		{
+			printf("Invalid choice\n");
+			return (0);
+		}
+		
 	}
+	
 	return (0);
  }
