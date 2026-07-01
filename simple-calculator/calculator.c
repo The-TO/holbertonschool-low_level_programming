@@ -26,12 +26,14 @@
 		}
 		if (choice == 1)
 		{
-			printf("choice: 1\n");
 			int A;
+			int B;
+
+			printf("choice: 1\n");
 			printf("A: ");
 			scanf ("%d", &A);
 			
-			int B;
+			
 			printf("B: ");
 			scanf ("%d", &B);
 			
