@@ -2,24 +2,24 @@
 #include <stdio.h>
 
 /**
- *  print_array - print number in a array
+ *  _strcpy - print print a array in a different destinaiton
  *
- * @a: is the value in the string
+ * @dest: is wherer we want to print our string
  *
- * @n: is the number of
+ * @src: is the source od ou string
  *
  * Return: Always 0.
  */
 char *_strcpy(char *dest, char *src)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (src[i] != '\0')
-    {
-	    dest[i] = src[i];
-	    i++;
-    }
-    dest[i] = src[i];
-    return (dest);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
+	return (dest);
 }
