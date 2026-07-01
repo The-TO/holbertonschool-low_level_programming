@@ -24,6 +24,14 @@
 			printf("Invalid choice\n");
 			return (0);
 		}
+		if (choice == 1)
+		{
+			int A;
+			int B;
+			scanf ( A);
+			scanf ( B);
+			printf (%s, A+B);
+		}
 		
 	}
 	
