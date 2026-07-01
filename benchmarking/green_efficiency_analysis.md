@@ -15,6 +15,11 @@ full CPU time consumed by the program, including any overhead between phases.
 All source files were compiled using strict flags:
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-long-long
 
+To ensure measurement reliability, the instrumentation program was executed
+four times. The recorded TOTAL times were 0.000953s, 0.000982s, 0.000737s,
+and 0.000709s, giving an average of 0.000845s. This shows that results are
+consistent across runs but not identical, due to OS scheduling and cache effects.
+
 ## Observed Performance Differences
 
 We observed that each phase executes in a different amount of time:
@@ -34,11 +39,6 @@ uniform operations.
 It is also worth noting that the TOTAL time (0.000953) is slightly greater than
 the sum of the three phases (0.000950), which reflects the micro-latency between
 function calls that our individual measurements do not capture.
-
-To ensure measurement reliability, the instrumentation program was executed
-four times. The recorded TOTAL times were 0.000953s, 0.000982s, 0.000737s,
-and 0.000709s, giving an average of 0.000845s. This shows that results are
-consistent across runs but not identical, due to OS scheduling and cache effects.
 
 A comparison between two algorithmic implementations was also measured.
 The naive algorithm completed in 0.726349 seconds, while the single-pass
