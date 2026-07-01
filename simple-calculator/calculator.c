@@ -27,9 +27,13 @@
 		if (choice == 1)
 		{
 			int A;
+			printf("A:");
 			scanf ("%d", &A);
+			
 			int B;
+			printf("B:");
 			scanf ("%d", &B);
+			
 			
 			printf ("Result: %d\n", A + B);
 
