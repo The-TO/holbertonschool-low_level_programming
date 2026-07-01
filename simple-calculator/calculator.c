@@ -26,6 +26,7 @@
 		}
 		if (choice == 1)
 		{
+			printf("choice: 1\n");
 			int A;
 			printf("A: ");
 			scanf ("%d", &A);
