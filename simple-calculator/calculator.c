@@ -78,13 +78,18 @@
 			printf("choice: 1\n");
 			printf("A: ");
 			scanf ("%d", &A);
-			
-			
+		
 			printf("B: ");
 			scanf ("%d", &B);
+			if(B == 0)
+			{
+				printf("Error: division by zero\n");	
+			}
+			else
+			{	
+				printf ("Result: %d\n", A / B);
+			}
 			
-			
-			printf ("Result: %d\n", A / B);
 		}
 		
 	}
