@@ -9,3 +9,17 @@
  *
  * Return: void (Aucun retour)
  */
+void reverse_array(int *a, int n)
+{
+    int i =0;
+	int j;
+    int temp;
+
+    for (i = 0 ; i != n ; i++)
+    {
+        temp = *a;
+	    *a = n;
+	    n = temp;
+        
+    }
+}
