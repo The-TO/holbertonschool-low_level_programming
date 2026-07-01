@@ -35,6 +35,17 @@ It is also worth noting that the TOTAL time (0.000953) is slightly greater than
 the sum of the three phases (0.000950), which reflects the micro-latency between
 function calls that our individual measurements do not capture.
 
+To ensure measurement reliability, the instrumentation program was executed
+four times. The recorded TOTAL times were 0.000953s, 0.000982s, 0.000737s,
+and 0.000709s, giving an average of 0.000845s. This shows that results are
+consistent across runs but not identical, due to OS scheduling and cache effects.
+
+A comparison between two algorithmic implementations was also measured.
+The naive algorithm completed in 0.726349 seconds, while the single-pass
+algorithm completed in 0.000028 seconds — approximately 25,941 times faster.
+This demonstrates that algorithmic choice has a far greater impact on runtime
+than any micro-optimization, and by extension, on energy consumption.
+
 ## Relation Between Runtime and Energy Consumption
 
 In a world that demands ever faster and more reliable software, efficiency is
