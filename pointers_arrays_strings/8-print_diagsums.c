@@ -10,6 +10,7 @@
  */
 
 void print_diagsums(int *a, int size)
+// Fonction qui affiche la somme des deux diagonales d'une matrice carrée
 {
 	int i;
 	int j;
@@ -18,15 +19,15 @@ void print_diagsums(int *a, int size)
 
 	sum1 = 0;
 	sum2 = 0;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size; i++) // Parcourt les lignes de la matrice
 	{
-		for (j = 0; j < size; j++)
+		for (j = 0; j < size; j++) // Parcourt les colonnes
 		{
 			if (i == j)
-				sum1 += a[i * size + j];
+				sum1 += a[i * size + j]; // Somme de la diagonale principale
 			if (i + j == size - 1)
-				sum2 += a[i * size + j];
+				sum2 += a[i * size + j]; // Somme de la diagonale secondaire
 		}
 	}
-	printf("%d, %d\n", sum1, sum2);
+	printf("%d, %d\n", sum1, sum2); // Affiche les deux sommes
 }
