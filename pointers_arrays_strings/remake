@@ -2,36 +2,24 @@
 #include "main.h"
 
 /**
- * _strstr - locates a substring
- * @haystack: string to search in
- * @needle: substring to find
+ * print_chessboard - prints the chessboard
+ * @a: pointer to a 2D array (8x8 chessboard)
  *
- * Return: pointer to the beginning of the located substring,
- * or NULL if the substring is not found
+ * Return: void
  */
-char *_strstr(char *haystack, char *needle)
-/*Fonction qui cherche la première occurrence de needle dans haystack*/ 
-{
-	unsigned int i;   /* position de départ testée dans haystack */
-	unsigned int j;   /* position dans needle, pour la comparaison */
 
-	i = 0;
-	while (haystack[i] != '\0')
+void print_chessboard(char (*a)[8])
+// Fonction qui affiche un échiquier 8x8 fourni sous forme de tableau 2D
+{
+	unsigned int i;
+	unsigned int j;
+
+	for (i = 0; i < 8; i++) // Boucle sur chaque ligne
 	{
-		j = 0;
-		/* tant qu'on n'a pas atteint la fin de needle
-		   ET que les caractères correspondent encore... */
-		while (needle[j] != '\0' && haystack[i + j] == needle[j])
+		for (j = 0; j < 8; j++) // Boucle sur chaque colonne
 		{
-			j++; // Parcourt needle et haystack en parallèle
+			_putchar(a[i][j]); // Affiche la case courante
 		}
-		/* si on est sorti de la boucle PARCE QUE needle est fini
-		   (donc tous les caractères ont matché), on a trouvé ! */
-		if (needle[j] == '\0')
-		{
-			return (&haystack[i]); // Si fin de needle atteinte, retourne pointeur
-		}
-		i++; // Passe au caractère suivant
+		_putchar('\n'); // Saut de ligne à chaque fin de ligne
 	}
-	return (NULL);
 }
