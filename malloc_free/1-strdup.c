@@ -34,5 +34,3 @@ char *_strdup(char *str)
 	copie[bcl] = '\0';
 	return (copie);
 }
-	
-
