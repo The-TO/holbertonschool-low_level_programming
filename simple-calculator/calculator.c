@@ -9,7 +9,7 @@
 	 */
 	
 	
-	printf ("Simple Calculator\n");
+	printf ("El Calculator\n");
 	while (choice != 0)
 	{
 		printf ("1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
@@ -17,7 +17,7 @@
 		scanf ("%d", &choice);
 		if(choice == 0)
 		{
-			printf("bye!");
+			printf("aleykoum salam le frere\n");
 		}
 		while (choice > 4)
 		{
@@ -83,7 +83,7 @@
 			scanf ("%d", &B);
 			if(B == 0)
 			{
-				printf("Error: division by zero\n");	
+				printf("bah nan GROS CON VA\n");	
 			}
 			else
 			{	
