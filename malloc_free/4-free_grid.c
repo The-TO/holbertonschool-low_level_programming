@@ -11,11 +11,14 @@
 
 void free_grid(int **grid, int height)
 {
-	int i;
+	int i; /* index de ligne, parcourt chaque tableau de int alloué séparément */
 
+	/* On libère chaque ligne une par une : chacune était un malloc distinct */
+	/* dans alloc_grid, donc il faut autant de free() que de lignes */
 	for (i = 0 ; i < height ; i++)
 	{
 		free(grid[i]);
 	}
-	free(grid);
-}
+
+	/* Enfin on libère le tableau de pointeurs lui-même (le "conteneur" des lignes) */
+	free(grid)

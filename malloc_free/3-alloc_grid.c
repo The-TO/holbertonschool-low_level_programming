@@ -11,33 +11,30 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **grid;
-	int i;
-	int j;
+	int **grid;  /* tableau de pointeurs : chaque case pointe vers une ligne */
+	int i;       /* index de ligne */
+	int j;       /* index de colonne, aussi réutilisé pour le nettoyage en cas d'échec */
 
+	/* On refuse les dimensions absurdes avant même de toucher à malloc */
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
+
+	/* 1er niveau d'allocation : un tableau de "height" pointeurs (les lignes) */
 	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < height ; i++)
 	{
+		/* 2e niveau d'allocation : chaque ligne est un tableau de "width" int */
 		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
 		{
+			/* Échec en cours de route : il faut libérer tout ce qui a déjà */
+			/* été alloué AVANT de return, sinon fuite mémoire garantie */
 			for (j = 0 ; j < i ; j++)
-			free(grid[j]);
-			free(grid);
-			return (NULL);
-		}
-		for (j = 0 ; j < width ; j++)
-		{
-			grid[i][j] = 0;
-		}
-	}
-	return (grid);
-}
+			free(gri
