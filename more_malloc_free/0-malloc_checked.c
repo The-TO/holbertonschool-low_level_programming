@@ -13,12 +13,18 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	void *ptr; /* void* car cette fonction est générique : elle peut allouer */
+	           /* pour n'importe quel type, à l'appelant de caster ensuite */
 
 	ptr = malloc(b);
+
+	/* Ici pas de "return NULL" comme dans tes autres fonctions : */
+	/* le choix de design est de tuer le programme direct avec exit(98) */
+	/* plutôt que de laisser l'appelant gérer l'échec lui-même */
 	if (ptr == NULL)
 	{
 		exit(98);
 	}
+
 	return (ptr);
 }

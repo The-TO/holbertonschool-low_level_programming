@@ -14,23 +14,32 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int totalsize;
-	unsigned int i;
-	char *tabl;
+	unsigned int totalsize; /* taille totale en octets à allouer */
+	unsigned int i;         /* index pour la boucle de mise à zéro */
+	char *tabl;              /* char* pour pouvoir écrire octet par octet (comme memset) */
 
+	/* La vraie fonction calloc() de la libc retourne NULL si nmemb ou size */
+	/* vaut 0 (comportement défini par la norme), donc on reproduit ça ici */
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+
+	/* On calcule la taille totale nous-mêmes, contrairement à malloc simple */
 	totalsize = nmemb * size;
+
 	tabl = malloc(totalsize);
 	if (tabl == NULL)
 	{
 		return (NULL);
 	}
+
+	/* La différence essentielle avec malloc : ici on initialise chaque */
+	/* octet à 0, alors que malloc laisse la mémoire "sale" (valeurs random) */
 	for (i = 0 ; i < totalsize ; i++)
 	{
 		tabl[i] = 0;
 	}
+
 	return (tabl);
 }
