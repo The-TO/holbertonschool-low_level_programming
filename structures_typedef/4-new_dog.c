@@ -43,7 +43,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	i = 0;
-	while (doggo->owner[i] != '\0')
+	while (owner[i] != '\0')
 	{
 		doggo->owner[i] = owner[i];
 		i++;
