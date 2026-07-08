@@ -38,27 +38,27 @@ char *_copy_string(char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d; // déclare un pointeur vers une structure dog_t
+	dog_t *d;
 
-	d = malloc(sizeof(dog_t)); // alloue de la mémoire pour une structure dog_t
-	if (d == NULL)			   // vérifie si l'allocation a échoué
-		return (NULL);		   // retourne NULL si l'allocation a échoué
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
+		return (NULL);
 
-	d->name = _copy_string(name); // copie le string name dans le champ name de la structure
-	if (d->name == NULL)		  // vérifie si la copie a échoué
+	d->name = _copy_string(name);
+	if (d->name == NULL)
 	{
-		free(d);	   // libère la mémoire de la structure d
-		return (NULL); // retourne NULL
+		free(d);
+		return (NULL);
 	}
 
-	d->owner = _copy_string(owner); // copie le string owner dans le champ owner de la structure
-	if (d->owner == NULL)			// vérifie si la copie a échoué
+	d->owner = _copy_string(owner);
+	if (d->owner == NULL)
 	{
-		free(d->name); // libère la mémoire du champ name
-		free(d);	   // libère la mémoire de la structure d
-		return (NULL); // retourne NULL
+		free(d->name);
+		free(d);
+		return (NULL);
 	}
 
-	d->age = age; // copie la valeur age dans le champ age de la structure
-	return (d);	  // retourne le pointeur vers la structure initialisée
+	d->age = age;
+	return (d);
 }
