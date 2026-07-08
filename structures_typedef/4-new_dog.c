@@ -1,64 +1,63 @@
+#include <stdlib.h>
 #include "dog.h"
 
 /**
- * _copy_string - Copies a string to a newly allocated memory
- * @src: Source string to copy
+ * _strdup - Copies a string into newly allocated memory
+ * @str: String to copy
  *
- * Return: Pointer to the newly allocated and copied string, or NULL on failure
+ * Return: Pointer to the copy, or NULL
  */
-char *_copy_string(char *src)
+char *_strdup(char *str)
 {
-	char *dest;
-	unsigned int i, len;
+	char *copy;
+	int i;
+	int len;
 
-	len = 0;
-	while (src[len])
-		len++;
-	dest = malloc(len + 1);
-	if (dest == NULL)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	for (len = 0; str[len] != '\0'; len++)
 	{
-		dest[i] = src[i];
-		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+
+	copy = malloc((len + 1) * sizeof(char));
+	if (copy == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
+		copy[i] = str[i];
+
+	return (copy);
 }
 
 /**
- * new_dog - Creates a new dog structure with allocated memory
- * @name: Pointer to a string containing the dog's name
- * @age: Float representing the dog's age
- * @owner: Pointer to a string containing the owner's name
+ * new_dog - Creates a new dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  *
- * Return: Pointer to the newly created dog_t structure, or NULL on failure
+ * Return: Pointer to the new dog, or NULL if it fails
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	dog_t *doggo;
 
-	d = malloc(sizeof(dog_t));
-	if (d == NULL)
+	doggo = malloc(sizeof(dog_t));
+	if (doggo == NULL)
 		return (NULL);
 
-	d->name = _copy_string(name);
-	if (d->name == NULL)
+	doggo->name = _strdup(name);
+	if (doggo->name == NULL)
 	{
-		free(d);
+		free(doggo);
 		return (NULL);
 	}
 
-	d->owner = _copy_string(owner);
-	if (d->owner == NULL)
+	doggo->owner = _strdup(owner);
+	if (doggo->owner == NULL)
 	{
-		free(d->name);
-		free(d);
+		free(doggo->name);
+		free(doggo);
 		return (NULL);
 	}
 
-	d->age = age;
-	return (d);
+	doggo->age = age;
+	return (doggo);
 }
