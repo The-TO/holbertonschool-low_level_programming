@@ -37,4 +37,17 @@ int **alloc_grid(int width, int height)
 			/* Échec en cours de route : il faut libérer tout ce qui a déjà */
 			/* été alloué AVANT de return, sinon fuite mémoire garantie */
 			for (j = 0 ; j < i ; j++)
-			free(gri
+			free(grid[j]);
+
+			// Libère le "tableau de pointeurs" principal
+			free(grid);
+			return (NULL); // Signale l'échec
+		}
+
+		// Étape 4 (Initialisation) : Met tous les éléments de la ligne 'i' à 0
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0; // Initialise la cellule [i][j] à 0
+	}
+
+	return (grid); // Retourne le pointeur vers la grille 2D complète
+}
