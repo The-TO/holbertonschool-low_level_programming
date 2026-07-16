@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		prtinf("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 	num1 = atoi(argv[1]);
