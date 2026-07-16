@@ -25,33 +25,33 @@ void print_all(const char *const format, ...)
 	unsigned int i;
 	char c;
 	char *s;
-	char *sep = ", ";
+	char *sep = "";
 
 	va_start(args, format);
 	i = 0;
 	while (format[i])
 	{
 		c = format[i];
-		if ((c == 'c' || c == 'i' || c == 'f' || c == 's')&& format[i+1] == '\0')
-		{
-			sep = "";
-		}
 		switch (c)
 		{
 		case 'c':
 			printf("%c%s", va_arg(args, int), sep);
+			sep = ", ";
 			break;
 		case 'i':
 			printf("%d%s", va_arg(args, int),sep);
+			sep = ", ";
 			break;
 		case 'f':
 			printf("%f%s", va_arg(args, double),sep);
+			sep = ", ";
 			break;
 		case 's':
 			s = va_arg(args, char *);
 			if (s == NULL)
 				s = "(nil)";
 			printf("%s%s", s, sep);
+			sep = ", ";
 			break;
 		default:
 			break;
