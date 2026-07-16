@@ -15,18 +15,18 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
-	char *strg;
-	unsigned int i;
+	va_list args;								// liste pour argumlents
+	char *strg;									// Pointeur sur chaque string
+	unsigned int i;								// Compteur de boucle
 
-	va_start(args, n);
+	va_start(args, n);							// Initialise la boîte à partir de n
 	for (i = 0 ; i < n ; i++)
 	{
-		if (i != 0 && separator != NULL)
+		if (i != 0 && separator != NULL)		// Affiche le séparateur entre les strings (sauf après la dernière) si il n'est pas null et que i != de 0
 		{
 			printf("%s", separator);
 		}
-		strg = va_arg(args, char *);
+		strg = va_arg(args, char *);			// Récupère chaque argument (string)
 
 		if (strg != NULL)
 		{
