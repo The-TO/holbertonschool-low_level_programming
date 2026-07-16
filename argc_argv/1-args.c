@@ -14,6 +14,17 @@
 int main(int argc, char *argv[])
 {
 	(void)argv;
+	/* argc contient le nombre total d'arguments reçus,
+	 * y compris le nom du programme (argv[0]).
+	 *
+	 * Comme la consigne demande uniquement le nombre
+	 * d'arguments passés par l'utilisateur, on retire 1.
+	 *
+	 * Exemple :
+	 *   ./nargs           -> argc = 1 -> affiche 0
+	 *   ./nargs hello     -> argc = 2 -> affiche 1
+	 *   ./nargs a b c     -> argc = 4 -> affiche 3
+	 */
 	printf("%d\n", argc - 1);
 	return (0);
 }
