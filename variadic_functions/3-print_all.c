@@ -25,12 +25,10 @@ void print_all(const char *const format, ...)
 	unsigned int i;
 	char c;
 	char *s;
-	int o;
 	char *sep = ", ";
 
 	va_start(args, format);
 	i = 0;
-	o = 0;
 	while (format[i])
 	{
 		c = format[i];
