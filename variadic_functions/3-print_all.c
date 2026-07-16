@@ -53,6 +53,8 @@ void print_all(const char *const format, ...)
 				s = "(nil)";
 			printf("%s%s", s, sep);
 			break;
+		default;
+			break;
 		}
 		i++;
 	}
