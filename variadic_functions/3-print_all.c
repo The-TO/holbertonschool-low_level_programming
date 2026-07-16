@@ -33,10 +33,9 @@ void print_all(const char *const format, ...)
 	while (format[i])
 	{
 		c = format[i];
-		if (c == 'c' || c == 'i' || c == 'f' || c == 's')
+		if ((c == 'c' || c == 'i' || c == 'f' || c == 's')&& o != 0)
 		{
-			if (o != 0)
-				printf(", ");
+			printf(", ");
 			o++;
 		}
 		switch (c)
