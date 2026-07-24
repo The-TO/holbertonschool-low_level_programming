@@ -2,7 +2,10 @@
 
 /**
  * list_len - retourne le nombre d'élémeent dans une liste chainée
+ * @h: pointeur vers l'en tete de la liste
  * 
+ * Return Succes le nombre de noeud dans la liste
+ *
  */
 
 size_t list_len(const list_t *h)
