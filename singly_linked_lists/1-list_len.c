@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ * list_len - retourne le nombre d'élémeent dans une liste chainée
+ * 
+ */
+
 size_t list_len(const list_t *h)
 {
 	size_t compteur;
